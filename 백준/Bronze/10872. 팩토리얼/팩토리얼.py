@@ -1,8 +1,6 @@
 def factorial(num):
-    if num == 0:
+    if num == 0 or num == 1:
         return 1
-    if num == 1:
-        return num
     return num * factorial(num-1)
 
 N = int(input())
