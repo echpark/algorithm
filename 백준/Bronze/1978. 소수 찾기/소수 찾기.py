@@ -1,5 +1,3 @@
-import math
-
 N = int(input())
 mylist = list(map(int, input().split()))
 
