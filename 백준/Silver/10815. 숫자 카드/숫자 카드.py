@@ -1,24 +1,13 @@
-def binarySearch(target):
-    left = 0
-    right = N-1
-
-    while left <= right:
-        middle = (left + right) // 2
-        if Nlist[middle] == target:
-            return 1
-        elif Nlist[middle] < target:
-            left = middle + 1
-        else:
-            right = middle - 1
-
-    return 0
-
 N = int(input())
-Nlist = list(map(int, input().split()))
+Ncards = set(list(map(int, input().split()))) # set으로 받아 찾을 때의 시간복잡도를 줄임
 M = int(input())
-Mlist = list(map(int, input().split()))
+Mcards = list(map(int, input().split()))
 
-Nlist.sort()
+ans = []
+for target in Mcards:
+    if target in Ncards:
+        ans.append(1)
+    else:
+        ans.append(0)
 
-for card in Mlist:
-    print(binarySearch(card))
+print(*ans)
