@@ -1,5 +1,5 @@
 N = int(input())
-Ncards = set(list(map(int, input().split()))) # set으로 받아 찾을 때의 시간복잡도를 줄임
+Ncards = set(list(map(int, input().split()))) # set: O(1)
 M = int(input())
 Mcards = list(map(int, input().split()))
 
